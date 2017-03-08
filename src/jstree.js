@@ -2536,6 +2536,9 @@
 					this.open_node(obj.id, false, 0);
 				}, this), 0);
 			}
+			if(typeof this.settings.redraw_node_callback=="function"){
+				this.settings.redraw_node_callback.call(this,obj,node)
+			}
 			return node;
 		},
 		/**
